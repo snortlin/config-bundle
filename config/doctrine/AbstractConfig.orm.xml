@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <mapped-superclass name="Snortlin\Bundle\ConfigBundle\Entity\AbstractConfig" table="system_configs">
+        <field name="key" column="key" type="string" length="128"/>
+        <field name="value" column="value" type="json" nullable="true"/>
+        <field name="description" column="description" type="text" nullable="true"/>
+
+        <unique-constraints>
+            <unique-constraint name="uc_system_configs_key" columns="key"/>
+        </unique-constraints>
+
+        <options>
+            <option name="comment">System Configurations</option>
+        </options>
+    </mapped-superclass>
+
+</doctrine-mapping>
