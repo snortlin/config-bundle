@@ -1,0 +1,31 @@
+{
+    "name": "snortlin/config-bundle",
+    "description": "Symfony bundle for application configuration values",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Petr Leixner",
+            "email": "snortlin@volny.cz"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "symfony/dependency-injection": "^6.4|^7.0",
+        "symfony/cache": "^6.4|^7.0",
+        "symfony/finder": "^6.4|^7.0",
+        "symfony/validator": "^6.4|^7.0",
+        "symfony/serializer": "^6.4|^7.0"
+    },
+    "suggest": {
+        "symfony/orm-pack": "For saving configurations to the database."
+    },
+    "autoload": {
+        "psr-4": {
+            "Snortlin\\Bundle\\ConfigBundle\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
